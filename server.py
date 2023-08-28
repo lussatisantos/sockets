@@ -14,3 +14,9 @@ def upserver():
     server.listen(1)
 
     print('Servidor processando, esperando uma conexao...')
+
+    target, ip = socket.accept()
+    print(f'Conexao recebida {ip[0]}')
+
+upserver()
+server.close()
