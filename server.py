@@ -7,3 +7,10 @@ def upserver():
     global server
     global ip
     global target
+
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.setsocket(socket.SQL_SOCKET, socket.SO_REUSEADDR, 1)
+    server.bind(['192.168.18.10', 7777])
+    server.listen(1)
+
+    print('Servidor processando, esperando uma conexao...')
