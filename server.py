@@ -22,7 +22,7 @@ def upserver():
     server.listen(1)
 
     print('Servidor processando, esperando uma conexao...')
-
+ 
     target, ip = server.accept()
     print(f'Conexao recebida {ip[0]}')
 
